@@ -1,0 +1,146 @@
+﻿
+@{
+	ViewData["Title"] = "Home page";
+}
+
+
+@model List<Books.Data.Product>
+
+	<!-- Products -->
+<div class="products">
+	<h3>Featured Products</h3>
+	<ul> 
+		@foreach (var p in Model)
+		{
+			<li>
+			<div class="product">
+					<a href="Product/Detail/@p.Id" class="info">
+					<span class="holder">
+						<img src="~/Assets/css/images/@p.ImageURL" alt="" />
+						<span class="book-name">@p.Name</span>
+						<span class="author">by @p.Author</span>
+							<span class="description">@p.Description.Substring(0,70)</span>
+					</span>
+				</a>
+				<a href="#" class="buy-btn">BUY NOW <span class="price"><span class="low">$</span>@p.Price<span class="high">00</span></span></a>
+			</div>
+			</li>
+		
+		}
+
+	</ul>
+	<!-- End Products -->
+</div>
+<div class="cl">&nbsp;</div>
+<!-- Best-sellers -->
+<div id="best-sellers">
+	<h3>Best Sellers</h3>
+	<ul>
+
+		@*@for(int i=0; i<Model.Count; i++)
+		{
+			if (i < 4)
+			{
+				<li>
+					<div class="product">
+						<a href="product/Detail/@Model[i].Id">
+							<img src="~/Assets/css/imagesBest/@Model[i].ImageURL" alt="" />
+							<span class="book-name">@Model[i]p.Name</span>
+							<span class="author">by @Model[i].Author</span>
+							<span class="price"><span class="low">$</span>@Model[i].Price<span class="high">00</span></span>
+						</a>
+					</div>
+				</li>
+			}
+			else
+			{
+				i = 0;
+			}
+		}*@
+	
+
+		
+		
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best01.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>35<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best02.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>45<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best03.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>15<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best04.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>27<span class="high">99</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best01.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>35<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best02.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>45<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best03.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>15<span class="high">00</span></span>
+				</a>
+			</div>
+		</li>
+		<li>
+			<div class="product">
+				<a href="#">
+					<img src="~/Assets/css/images/image-best04.jpg" alt="" />
+					<span class="book-name">Book Name </span>
+					<span class="author">by John Smith</span>
+					<span class="price"><span class="low">$</span>27<span class="high">99</span></span>
+				</a>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- End Best-sellers -->

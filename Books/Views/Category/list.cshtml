@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model List<Books.Data.Product>
+   @foreach (var p in Model)
+		{
+			<li>
+			<div class="product">
+				<a href="Product/Detail/@p.Id" class="info">
+					<span class="holder">
+						<img src="~/Assets/css/images/@p.ImageURL" alt="" />
+						<span class="book-name">@p.Name</span>
+						<span class="author">by @p.Author</span>
+							<span class="description">@p.Description.Substring(0,70)</span>
+					</span>
+				</a>
+				<a href="#" class="buy-btn">BUY NOW <span class="price"><span class="low">$</span>@p.Price<span class="high">00</span></span></a>
+			</div>
+			</li>
+		
+
+		}
